@@ -771,6 +771,10 @@
       <SubType>compile</SubType>
       <Link>cyclic_buffer.c</Link>
     </Compile>
+    <Compile Include="..\hardware_inits.c">
+      <SubType>compile</SubType>
+      <Link>hardware_inits.c</Link>
+    </Compile>
     <Compile Include="..\motors.c">
       <SubType>compile</SubType>
       <Link>motors.c</Link>
@@ -778,6 +782,10 @@
     <Compile Include="..\pid.c">
       <SubType>compile</SubType>
       <Link>pid.c</Link>
+    </Compile>
+    <Compile Include="..\thc.c">
+      <SubType>compile</SubType>
+      <Link>thc.c</Link>
     </Compile>
     <Compile Include="..\tracker.c">
       <SubType>compile</SubType>

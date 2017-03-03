@@ -4,9 +4,13 @@
 
 ..\cyclic_buffer.c
 
+..\hardware_inits.c
+
 ..\motors.c
 
 ..\pid.c
+
+..\thc.c
 
 ..\tracker.c
 

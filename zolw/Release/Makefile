@@ -83,8 +83,10 @@ SUBDIRS :=  \
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../../cyclic_buffer.c \
+../../hardware_inits.c \
 ../../motors.c \
 ../../pid.c \
+../../thc.c \
 ../../tracker.c \
 ../src/ASF/common/services/clock/sam3x/sysclk.c \
 ../src/ASF/common/utils/interrupt/interrupt_sam_nvic.c \
@@ -110,8 +112,10 @@ ASM_SRCS +=
 
 OBJS +=  \
 cyclic_buffer.o \
+hardware_inits.o \
 motors.o \
 pid.o \
+thc.o \
 tracker.o \
 src/ASF/common/services/clock/sam3x/sysclk.o \
 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o \
@@ -130,8 +134,10 @@ src/main.o
 
 OBJS_AS_ARGS +=  \
 cyclic_buffer.o \
+hardware_inits.o \
 motors.o \
 pid.o \
+thc.o \
 tracker.o \
 src/ASF/common/services/clock/sam3x/sysclk.o \
 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o \
@@ -150,8 +156,10 @@ src/main.o
 
 C_DEPS +=  \
 cyclic_buffer.d \
+hardware_inits.d \
 motors.d \
 pid.d \
+thc.d \
 tracker.d \
 src/ASF/common/services/clock/sam3x/sysclk.d \
 src/ASF/common/utils/interrupt/interrupt_sam_nvic.d \
@@ -170,8 +178,10 @@ src/main.d
 
 C_DEPS_AS_ARGS +=  \
 cyclic_buffer.d \
+hardware_inits.d \
 motors.d \
 pid.d \
+thc.d \
 tracker.d \
 src/ASF/common/services/clock/sam3x/sysclk.d \
 src/ASF/common/utils/interrupt/interrupt_sam_nvic.d \
@@ -203,6 +213,10 @@ LINKER_SCRIPT_DEP+=  \
 
 
 # AVR32/GNU C Compiler
+
+
+
+
 
 
 

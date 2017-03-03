@@ -44,13 +44,13 @@ void z_step(void){
 };
 
 void x_dir_left(void){
-	pio_set(PIOB, PIO_PB26);
-	pio_clear(PIOA, PIO_PA14);
+	pio_clear(PIOB, PIO_PB26);
+	pio_set(PIOA, PIO_PA14);
 };
 
 void x_dir_right(void){
-	pio_clear(PIOB, PIO_PB26);
-	pio_set(PIOA, PIO_PA14);
+	pio_set(PIOB, PIO_PB26);
+	pio_clear(PIOA, PIO_PA14);
 };
 
 void x_step(void){

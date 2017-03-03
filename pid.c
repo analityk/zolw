@@ -10,7 +10,7 @@ void pid_compute(TS_PID* pid)
 	pid->error = pid->setpoint - pid->measure_val;
 	pid->integral = pid->integral + (pid->error * pid->dt);
 	pid->derivative = (pid->error - pid->prev_error) / pid->dt;
-	pid->output = pid->kp * pid->error + pid->ki * pid->integral + pid->kd * pid->derivative;
+	pid->output = (pid->kp * pid->error) + (pid->ki * pid->integral) + (pid->kd * pid->derivative);
 	pid->prev_error = pid->error;
 };
 
