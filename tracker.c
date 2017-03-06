@@ -138,7 +138,7 @@ void homing(void)
 	}while(limit_switch_x);
 	
 	set_speed_acc(2);
-	delay_tracker(0xFFFFFF);
+	delay_tracker(0xFFFFF);
 	
 	set_speed_acc(2000);
 	
@@ -149,7 +149,7 @@ void homing(void)
 		limit_switch_y = pio_get(PIOC, PIO_TYPE_PIO_INPUT, PIO_PC16);
 	}while(limit_switch_y);
 	
-	delay_tracker(0xFFFFFF);
+	delay_tracker(0xFFFFF);
 	
 	reset_coordinates();
 }

@@ -84,6 +84,7 @@ SUBDIRS :=  \
 C_SRCS +=  \
 ../../cyclic_buffer.c \
 ../../hardware_inits.c \
+../../in_out.c \
 ../../motors.c \
 ../../pid.c \
 ../../thc.c \
@@ -113,6 +114,7 @@ ASM_SRCS +=
 OBJS +=  \
 cyclic_buffer.o \
 hardware_inits.o \
+in_out.o \
 motors.o \
 pid.o \
 thc.o \
@@ -135,6 +137,7 @@ src/main.o
 OBJS_AS_ARGS +=  \
 cyclic_buffer.o \
 hardware_inits.o \
+in_out.o \
 motors.o \
 pid.o \
 thc.o \
@@ -157,6 +160,7 @@ src/main.o
 C_DEPS +=  \
 cyclic_buffer.d \
 hardware_inits.d \
+in_out.d \
 motors.d \
 pid.d \
 thc.d \
@@ -179,6 +183,7 @@ src/main.d
 C_DEPS_AS_ARGS +=  \
 cyclic_buffer.d \
 hardware_inits.d \
+in_out.d \
 motors.d \
 pid.d \
 thc.d \
@@ -213,6 +218,8 @@ LINKER_SCRIPT_DEP+=  \
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 

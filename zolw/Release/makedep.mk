@@ -6,6 +6,8 @@
 
 ..\hardware_inits.c
 
+..\in_out.c
+
 ..\motors.c
 
 ..\pid.c

@@ -31,6 +31,7 @@
 #include <stdlib.h>
 
 #include <asf.h>
+#include <in_out.h>
 #include <hardware_inits.h>
 #include <math.h>
 #include <motors.h>
@@ -54,9 +55,13 @@ ISR( UART_Handler ){
 ISR( TC1_Handler ){
 	uint32_t volatile tc0_sr1 = REG_TC0_SR1;
 	UNUSED(tc0_sr1);
-
-	uint8_t pin = pio_get(PIOC, PIO_TYPE_PIO_INPUT, PIO_PC16);
 	
+	io_state.pio_a_state = get_pio_a();
+	io_state.pio_b_state = get_pio_b();
+	io_state.pio_c_state = get_pio_c();
+	io_state.pio_d_state = get_pio_d();
+	
+	io_drive(&io_state);
 };
 
 void delay(uint32_t volatile t);
@@ -79,24 +84,24 @@ int main (void)
 	
 	board_init();
 	
-	pio_cfg();
-	
 	hardware_init();
+	
+	io_init(io_drive);
 	
 	// pid config
 	thc_set_pid(0.001, 15, 0.01, 0.005);
 	thc_set_height_v(120.0);
 	thc_enable();
 		
-	//homing();
-	//reset_coordinates();
+	homing();
 	
 	uint32_t speed = 1000;
 	
 	while(1){
-		//set_speed_acc(speed);
-		//move(126, 126);
-		//speed += 5;
+		line(0,0,1000,0);
+		line(1000,0,1000,1000);
+		line(1000,1000, 1000, 0 );
+		line(1000,0, 0, 0);
 	};
 
 };

@@ -2,11 +2,8 @@
 #define motors_h__
 
 #include <asf.h>
-#include <pinout.h>
 
 extern uint8_t volatile lock;
-
-void pio_cfg(void);
 
 void z_dir_left(void);
 void z_dir_right(void);

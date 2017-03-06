@@ -129,7 +129,7 @@ tracker.d tracker.o: ../../tracker.c ../../tracker.h ../src/asf.h \
  ../src/ASF/sam/drivers/pmc/pmc.h ../src/ASF/common/services/clock/pll.h \
  ../src/ASF/common/services/clock/sam3x/pll.h \
  ../src/ASF/sam/drivers/pmc/sleep.h \
- ../src/ASF/sam/drivers/pio/pio_handler.h ../../motors.h ../../pinout.h
+ ../src/ASF/sam/drivers/pio/pio_handler.h ../../motors.h
 
 ../../tracker.h:
 
@@ -406,5 +406,3 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 ../src/ASF/sam/drivers/pio/pio_handler.h:
 
 ../../motors.h:
-
-../../pinout.h:

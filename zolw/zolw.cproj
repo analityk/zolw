@@ -775,6 +775,10 @@
       <SubType>compile</SubType>
       <Link>hardware_inits.c</Link>
     </Compile>
+    <Compile Include="..\in_out.c">
+      <SubType>compile</SubType>
+      <Link>in_out.c</Link>
+    </Compile>
     <Compile Include="..\motors.c">
       <SubType>compile</SubType>
       <Link>motors.c</Link>
