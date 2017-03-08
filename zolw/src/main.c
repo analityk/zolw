@@ -28,6 +28,9 @@
 /*
  * Support and FAQ: visit <a href="http://www.atmel.com/design-support/">Atmel Support</a>
  */
+
+
+// max speed 8000 steps/s
 #include <stdlib.h>
 
 #include <asf.h>
@@ -89,13 +92,13 @@ int main (void)
 	io_init(io_drive);
 	
 	// pid config
-	thc_set_pid(0.001, 15, 0.01, 0.005);
-	thc_set_height_v(120.0);
+	thc_set_pid(0.001, 250, 1, 0.010);
+	thc_set_height_v(100.0);
 	thc_enable();
 		
-	homing();
+	//homing();
 	
-	uint32_t speed = 1000;
+	//set_speed_acc(1600);
 	
 	while(1){
 		line(0,0,1000,0);

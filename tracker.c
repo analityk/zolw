@@ -9,7 +9,7 @@ int32_t volatile delay_ms_irq;
 uint32_t volatile actual_speed = 1000;
 uint32_t volatile target_speed = 1000;
 
-const uint32_t volatile accel = 2000;
+const uint32_t volatile accel = 2500;
 
 uint8_t volatile acl_phase = 1;
 uint8_t volatile dcl_phase = 0;
@@ -128,7 +128,7 @@ void homing(void)
 	set_speed_acc(2);
 	line(0,0,1,1);
 	line(1,1,0,0);
-	set_speed_acc(2000);
+	set_speed_acc(9000);
 	
 	uint32_t dx = 0;
 	do{
@@ -194,6 +194,12 @@ ISR( TC2_Handler ){
 ISR( TC0_Handler ){
 	uint32_t volatile tc0_sr0 = REG_TC0_SR0;
 	UNUSED(tc0_sr0);
-	lock = 0;
-	REG_TC0_RC0 = step_time;
+	if(lock == 0){
+		// blue screen error
+		REG_TC0_RC0 = 420000;
+	}else{
+		lock = 0;
+		REG_TC0_RC0 = step_time;
+	};
+	
 };

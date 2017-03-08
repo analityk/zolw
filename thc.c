@@ -57,9 +57,10 @@ ISR( ADC_Handler ){
 			
 			if(adc_error > 2){
 				REG_TC1_CCR0 = 5;
-				uint32_t tc_rc = 42000000/ (adc_error * 10);
-				if(tc_rc <= 3000 ){
-					tc_rc = 3000;
+				double f = (42000000.0 / adc_error);
+				uint32_t tc_rc = (uint32_t)f;
+				if(tc_rc <= 800 ){
+					tc_rc = 800;
 				};
 				REG_TC1_RC0 = tc_rc;
 			}else{

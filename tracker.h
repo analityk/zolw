@@ -17,6 +17,7 @@ extern uint8_t volatile dcl_phase;
 void move(int8_t dx, int8_t dy);
 void set_speed(int32_t step_per_second);
 void set_speed_acc(int32_t step_per_second);
+
 void line(int32_t x1, int32_t y1, int32_t x2, int32_t y2);
 void homing(void);
 void reset_coordinates(void);
