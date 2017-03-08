@@ -47,12 +47,7 @@ uint8_t led = 0;
 uint32_t volatile rs_edge = 0;
 
 // receive data
-ISR( UART_Handler ){
-	uint32_t volatile status = REG_UART_SR;
-	UNUSED(status);
-	uint8_t volatile data = REG_UART_RHR;
-	REG_UART_THR = data;// cb_receive(data);
-};
+
 
 // io drive
 ISR( TC1_Handler ){

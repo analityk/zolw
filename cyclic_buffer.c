@@ -1,5 +1,12 @@
 #include <cyclic_buffer.h>
 
+ISR( UART_Handler ){
+	uint32_t volatile status = REG_UART_SR;
+	UNUSED(status);
+	uint8_t volatile data = REG_UART_RHR;
+	REG_UART_THR = cb_receive(data);
+};
+
 typedef struct {
 	uint8_t volatile rec_cnt;
 	uint8_t rec_tab[3];

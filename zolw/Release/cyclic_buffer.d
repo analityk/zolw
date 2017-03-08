@@ -130,7 +130,7 @@ cyclic_buffer.d cyclic_buffer.o: ../../cyclic_buffer.c \
  ../src/ASF/sam/drivers/pmc/pmc.h ../src/ASF/common/services/clock/pll.h \
  ../src/ASF/common/services/clock/sam3x/pll.h \
  ../src/ASF/sam/drivers/pmc/sleep.h \
- ../src/ASF/sam/drivers/pio/pio_handler.h
+ ../src/ASF/sam/drivers/pio/pio_handler.h ../../serial.h
 
 ../../cyclic_buffer.h:
 
@@ -405,3 +405,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 ../src/ASF/sam/drivers/pmc/sleep.h:
 
 ../src/ASF/sam/drivers/pio/pio_handler.h:
+
+../../serial.h:

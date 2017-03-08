@@ -132,8 +132,8 @@ src/main.d src/main.o: ../src/main.c \
  ../src/ASF/sam/drivers/pio/pio_handler.h ../../in_out.h ../../pinout.h \
  ../../hardware_inits.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\math.h \
- ../../motors.h ../../cyclic_buffer.h ../../tracker.h ../../pid.h \
- ../../thc.h
+ ../../motors.h ../../cyclic_buffer.h ../../serial.h ../../tracker.h \
+ ../../pid.h ../../thc.h
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdlib.h:
 
@@ -418,6 +418,8 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 ../../motors.h:
 
 ../../cyclic_buffer.h:
+
+../../serial.h:
 
 ../../tracker.h:
 
